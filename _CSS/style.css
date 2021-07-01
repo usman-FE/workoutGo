@@ -30,8 +30,28 @@ body {
   height: 20%;
   top: 0;
   left: 0;
-  /* background-color: rgba(0, 0, 0, 0.3); */
-  backdrop-filter: blur(5px);
+  font-family: "Audiowide", cursive;
+  font-size: 2rem;
+  background-color: rgba(17, 17, 17, 0.5);
+  /* background-color: #2d3438e7; */
+  backdrop-filter: blur(6px);
+  z-index: 2;
+}
+
+.logo a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.logo p {
+  margin: 0;
+  align-self: flex-end;
+  letter-spacing: 1px;
 }
 
 .card-section {
@@ -39,9 +59,7 @@ body {
   font-size: 15px;
   height: 80%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  overflow-y: scroll;
-  /* backdrop-filter: blur(1px); */
+  z-index: 1;
 }
 
 .logo img {
@@ -63,11 +81,21 @@ ul {
   display: grid;
   gap: 0.5rem 2rem;
   padding: 1.5rem 1rem;
-  background-color: rgba(0, 0, 0, 0.486);
-  backdrop-filter: blur(5px);
+  background-color: rgba(24, 23, 23, 0.7);
+  backdrop-filter: blur(6px);
   width: 100%;
   grid-template-columns: 1fr 1fr;
   z-index: 1;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  border-radius: 5px;
+}
+
+.hidden {
+  margin-top: -7rem;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
 }
 
 .form-item label {
@@ -92,16 +120,30 @@ select {
 .workout-card {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border-radius: 5px;
   margin-bottom: 0.5rem;
-  background-color: rgba(0, 0, 0, 0.486);
-  backdrop-filter: blur(4px);
-  padding: 1.3rem;
+  background-color: rgba(24, 23, 23, 0.7);
+  backdrop-filter: blur(6px);
+  padding: 1.3rem 1rem;
   transition: all 0.2s ease-in-out;
   background-size: cover;
   background-position: center;
-  /* z-index: 1; */
+  z-index: 2;
+}
+
+.workout-card h3 {
+  font-size: 23px;
+}
+
+.workout-card-img {
+  /* position: absolute; */
+  top: 1%;
+  z-index: -11;
+  right: 15%;
+  font-size: 40px;
+  /* opacity: 0.2; */
+  transform: rotate(40deg);
 }
 
 .workout-detail {
