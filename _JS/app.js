@@ -1,5 +1,7 @@
+const map = document.querySelector("#map");
 const form = document.querySelector(".workout-form");
 
-document.addEventListener("click", function () {
+map.addEventListener("click", function () {
+  console.log("click");
   form.classList.toggle("hidden");
 });
